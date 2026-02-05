@@ -37,6 +37,7 @@ frontend/src/
 | FE-CRUD | CRUD 화면 구현 |
 | FE-page | 페이지/컴포넌트 생성 |
 | FE-api | API 호출 코드 작성 |
+| FE-design | 화면 디자인 스타일링 참고 |
 
 ## 규칙
 

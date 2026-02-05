@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(gh:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(.venv/Scripts/python:*)",
+      "Bash(.venvScriptspython -c \"from app.services.topology_service import build_topology_graph; from app.database import SessionLocal; db = SessionLocal\\(\\); result = build_topology_graph\\(db\\); print\\(''Nodes:'', len\\(result[''nodes'']\\)\\); print\\(''Edges:'', len\\(result[''edges'']\\)\\); db.close\\(\\)\")",
+      "Bash(.venvScriptspython.exe -c \"from app.schemas.topology import TopologyEdge; edge = TopologyEdge\\(**{''id'': ''test'', ''from'': ''src'', ''to'': ''dst'', ''label'': ''test''}\\); print\\(''Schema validation successful''\\); print\\(f''Edge from_: {edge.from_}''\\)\")",
+      "Bash(where:*)",
+      "Bash(\"C:\\\\Users\\\\student\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe\" test_schema_fix.py)",
+      "Bash(dir:*)",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" test_schema_fix.py)",
+      "Bash(\".venv\\\\Scripts\\\\python.exe\" test_api_endpoint.py)",
+      "Bash(tree:*)",
+      "Bash(.venvScriptspython.exe -m uvicorn app.main:app --reload --port 8000)",
+      "Bash(.venv\\\\Scripts\\\\python -m pip install:*)",
+      "Bash(.venv/Scripts/python.exe -m pip install:*)",
+      "Bash(timeout 5 bash -c 'while ! curl -s http://localhost:8000/docs > /dev/null 2>&1; do sleep 1; done; echo \"\"Server is running!\"\"')",
+      "Bash(tasklist:*)"
     ]
   }
 }

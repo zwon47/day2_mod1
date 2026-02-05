@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Space Theme - Starry Background Animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.stars-small, .stars-medium, .stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+.stars-small {
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(1px 1px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 15% 80%, white, transparent),
+    radial-gradient(1px 1px at 40% 40%, white, transparent),
+    radial-gradient(1px 1px at 70% 20%, white, transparent);
+  background-size: 200px 200px;
+  animation: twinkle 3s infinite;
+}
+
+.stars-medium {
+  background-image:
+    radial-gradient(2px 2px at 40% 20%, white, transparent),
+    radial-gradient(2px 2px at 70% 80%, white, transparent),
+    radial-gradient(2px 2px at 30% 90%, white, transparent),
+    radial-gradient(2px 2px at 85% 50%, white, transparent);
+  background-size: 300px 300px;
+  animation: twinkle 5s infinite;
+}
+
+.stars-large {
+  background-image:
+    radial-gradient(3px 3px at 10% 40%, white, transparent),
+    radial-gradient(3px 3px at 90% 70%, white, transparent),
+    radial-gradient(3px 3px at 55% 15%, white, transparent);
+  background-size: 400px 400px;
+  animation: twinkle 7s infinite;
+}
